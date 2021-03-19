@@ -1,0 +1,34 @@
+﻿@model List<Ejecicio1.Models.Data.Product>
+@{
+    ViewBag.Title = "Lista de productos";
+}
+
+<h2>Lista de productos</h2>
+
+<table class="table table-condensed table-hover">
+    <tr>
+        <th>Nombre</th>
+        <th>Imagen</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Total</th>
+        <th></th>
+    </tr>
+
+    @foreach(var p in Model)
+    {
+        <tr>
+            <td>@p.Name</td>
+            <td>
+                <img width="120" height="60" src="@p.Image" alt="@p.Name" />
+            </td>
+            <td>@p.Price</td>
+            <td>@p.Stock</td>
+            <td>@p.Total</td>
+            <td>
+                <a href="/Products/Show/@p.Id" class="btn btn-sm btn-info">Ver Producto</a>
+            </td>
+        </tr>
+    }
+</table>
+

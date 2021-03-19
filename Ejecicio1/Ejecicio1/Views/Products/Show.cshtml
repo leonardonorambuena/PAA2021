@@ -1,0 +1,35 @@
+﻿@model Ejecicio1.Models.Data.Product
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="card">
+    <div class="card-header">@ViewBag.Title</div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Nombre:</th>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <th>Imagen:</th>
+                <td>
+                    <img src="@Model.Image" width="200" height="120" alt="@Model.Name" />
+                </td>
+            </tr>
+            <tr>
+                <th>Precio:</th>
+                <td>@Model.Price</td>
+            </tr>
+            <tr>
+                <th>Stock:</th>
+                <td>@Model.Stock</td>
+            </tr>
+            <tr>
+                <th>Total:</th>
+                <td>@Model.Total</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
